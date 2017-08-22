@@ -3,7 +3,7 @@ require 'spec_helper'
 feature 'user visits show page' do
   let!(:planet) { Planet.create(name: 'Tatooine', climate: 'Sandy', rating: 1, extant: true)}
 
-  scenario 'user sees all planets' do
+  scenario 'user sees one planets details' do
     visit '/planets'
     click_link planet.name
 

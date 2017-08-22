@@ -6,9 +6,11 @@ get '/' do
 end
 
 get '/planets' do
-
+  @planets = Planet.all
+  erb :index
 end
 
 get '/planets/:id' do
-
+  @planet = Planet.find(params[:id])
+  erb :show
 end
